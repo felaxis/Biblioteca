@@ -4,6 +4,7 @@ public class Livro {
 	String nomeDoLivro;
 	Autor autor = new Autor();
 	int numeroDeSerie;
+	int numeroDeVezesEmQueFoiLocado = 0;
 
 	public class Autor {
 		String nomeDoAutor;
@@ -13,26 +14,23 @@ public class Livro {
 
 	String situacaoAtual;
 
-	public String locarLivro(){
+	public String locarLivro() {
 		verificarDisponibilidade(situacaoAtual);
-		situacaoAtual = "nao disponivel";
-		
-		
-	private String verificarDisponibilidade(String situacaoAtual) {
-		if (situacaoAtual == "disponivel") {
-			return situacaoAtual;
-		} else {
-			return "Livro ja locado.";
-		}
-	}	
+		return situacaoAtual = "nao disponivel";
 	}
 
-	private void verificarDisponibilidade(String situacaoAtual) {
+	private String verificarDisponibilidade(String situacaoAtual) {
 		if (situacaoAtual == "disponivel" ) {
+			numeroDeVezesEmQueFoiLocado++;
 			return //definirPrazo()
 		} else {
-			return //mensagemDeLivroIndisponivel();
+			mensagemDeLivroIndisponivel();
 		}
+	}
+
+	private String mensagemDeLivroIndisponivel() {
+		System.out.println("Livro não disponivel para empréstimo.");
+		return null;
 	}
 
 	private void devolverLivro() {
