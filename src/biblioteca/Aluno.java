@@ -1,6 +1,10 @@
 package biblioteca;
 
+
 public class Aluno {
+	private String nomeDoAluno;
+	private int registroDoAluno;
+	private livrosAlugados[] 
 
 	public String alugarLivro() {
 		Livro.verificarDisponibilidade(Livro.disponibilidadeParaAlugar);
