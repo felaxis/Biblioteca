@@ -4,7 +4,7 @@ package biblioteca;
 public class Aluno {
 	private String nomeDoAluno;
 	private int registroDoAluno;
-	private livrosAlugados[] 
+/*	private Aluno[] livrosComOALuno = new Aluno[quantidadeDeLivrosAlugados()]; */
 
 	public String alugarLivro() {
 		Livro.verificarDisponibilidade(Livro.disponibilidadeParaAlugar);
@@ -24,8 +24,11 @@ public class Aluno {
 		}
 	}
 
-	private void determinarNumeroDeVezesEmQueFoiLivroFoiAlugado() {
+	/*private void determinarNumeroDeVezesEmQueFoiLivroFoiAlugado() {
 		Livro.setNumeroDeVezesEmQueFoiAlugado(Livro.getNumeroDeVezesEmQueFoiAlugado() + 1);
 	}
-
+	private int quantidadeDeLivrosAlugados() {
+				
+		return quantidadeDeLivrosAlugados();
+	}*/
 }
