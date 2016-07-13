@@ -1,42 +1,37 @@
 package biblioteca;
 
+import java.util.ArrayList;
+
 public class Aluno {
+
 	private String nomeDoAluno;
-	private int registroDoAluno;
-	/*
-	 * private Aluno[] livrosComOALuno = new
-	 * Aluno[quantidadeDeLivrosAlugados()];
-	 */
+	private String registroDoAluno;
+	private ArrayList<Livro> livrosAlugados;
 
-	Livro Livro = new Livro("Livro Teste", 200, 0, 1001, true);
-
-	public String alugarLivro() {
-
-		Livro.verificarDisponibilidade(Livro.disponibilidadeParaAlugar);
-
-		if (Livro.disponibilidadeParaAlugar == true) {
-			alterarStatusDoLivro();
-			// determinarNumeroDeVezesEmQueFoiLivroFoiAlugado();
-		} else {
-			System.out.println("Não é possível alugar o livro, o mesmo se encontra locado.");
-		}
-		return "livro locado com sucesso";
-
+	public Aluno(String nomeDoAluno, String registroDoAluno) {
+		this.nomeDoAluno = nomeDoAluno;
+		this.registroDoAluno = registroDoAluno;
+		this.livrosAlugados = new ArrayList<>();
 	}
 
-	private void alterarStatusDoLivro() {
-		boolean disponibilidadeParaAlugar = Livro.disponibilidadeParaAlugar;
-		if (Livro.verificarDisponibilidade(disponibilidadeParaAlugar) == "possivel alugar") {
-			disponibilidadeParaAlugar = false;
+	public void alugarLivros(Livro livroAlugado) {
+		this.livrosAlugados.add(livroAlugado);
+	}
+
+	public void verificarSeLivroJaEstaAlugado(Livro livroAlugado) {
+		for (int indice = 0; indice <= getQuantidadeDeLivrosAlugados(); indice++) {
+				if (Livro nomeDoLivro == livrosAlugados.get(indice)){
+					
+				};
 		}
 	}
 
-	/*
-	 * private void determinarNumeroDeVezesEmQueFoiLivroFoiAlugado() {
-	 * Livro.setNumeroDeVezesEmQueFoiAlugado(Livro.
-	 * getNumeroDeVezesEmQueFoiAlugado() + 1); } private int
-	 * quantidadeDeLivrosAlugados() {
-	 * 
-	 * return quantidadeDeLivrosAlugados(); }
-	 */
+	public String getNomeDoAluno() {
+		return nomeDoAluno;
+	}
+
+	public int getQuantidadeDeLivrosAlugados() {
+		return livrosAlugados.size();
+	}
+
 }
