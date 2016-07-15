@@ -7,6 +7,7 @@ public class Aluno {
 	private String nomeDoAluno;
 	private String registroDoAluno;
 	private ArrayList<Livro> livrosAlugados;
+	private int indice = 0;
 
 	public Aluno(String nomeDoAluno, String registroDoAluno) {
 		this.nomeDoAluno = nomeDoAluno;
@@ -15,15 +16,13 @@ public class Aluno {
 	}
 
 	public void alugarLivros(Livro livroAlugado) {
-		this.livrosAlugados.add(livroAlugado);
-	}
-
-	public void verificarSeLivroJaEstaAlugado(Livro livroAlugado) {
-		for (int indice = 0; indice <= getQuantidadeDeLivrosAlugados(); indice++) {
-				if (Livro nomeDoLivro == livrosAlugados.get(indice)){
-					
-				};
+		if (indice <= 0) {
+			this.livrosAlugados.add(livroAlugado);
+			indice++;
+		} else {
+			System.out.println("Não é possível locar esse livro.");
 		}
+		
 	}
 
 	public String getNomeDoAluno() {
