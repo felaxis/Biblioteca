@@ -9,13 +9,18 @@ public class Teste {
 		Aluno aluno = new Aluno("alcir", "123");
 
 		Autor autor = new Autor("Kathy Sierra");
+		
+		Aluno outroAluno = new Aluno("diego", "332");
 
 		Livro livroAlugado = new Livro("java", autor, 200, 555);
 
 		aluno.alugarLivros(livroAlugado);
-		
+
 		System.out.println("Aluno : " + aluno.getNomeDoAluno() + "\nLivros alugados: "
 				+ aluno.getQuantidadeDeLivrosAlugados() + "\n");
+		
+		System.out.println("Aluno : " + outroAluno.getNomeDoAluno() + "\nLivros alugados: "
+				+ outroAluno.getQuantidadeDeLivrosAlugados() + "\n");
 
 	}
 

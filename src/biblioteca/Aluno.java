@@ -7,8 +7,8 @@ public class Aluno {
 	private String nomeDoAluno;
 	private String registroDoAluno;
 	private ArrayList<Livro> livrosAlugados;
-	static boolean verificadorDeLivroAlugado = false;
-
+	boolean livroJaAlugado = false;
+	
 	public Aluno(String nomeDoAluno, String registroDoAluno) {
 		this.nomeDoAluno = nomeDoAluno;
 		this.registroDoAluno = registroDoAluno;
@@ -16,9 +16,12 @@ public class Aluno {
 	}
 
 	public void alugarLivros(Livro livroAlugado) {
-verificadorDeLivroAlugado = false;
-		this.livrosAlugados.add(livroAlugado);
-		
+		if (!livroJaAlugado){
+			this.livrosAlugados.add(livroAlugado);
+			livroJaAlugado = true;
+		} else {
+			System.out.println("não da pra alugar");
+		}
 	}
 
 	public String getNomeDoAluno() {
