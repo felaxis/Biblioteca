@@ -7,7 +7,7 @@ public class Aluno {
 	private String nomeDoAluno;
 	private String registroDoAluno;
 	private ArrayList<Livro> livrosAlugados;
-	private int indice = 0;
+	static boolean verificadorDeLivroAlugado = false;
 
 	public Aluno(String nomeDoAluno, String registroDoAluno) {
 		this.nomeDoAluno = nomeDoAluno;
@@ -16,12 +16,8 @@ public class Aluno {
 	}
 
 	public void alugarLivros(Livro livroAlugado) {
-		if (indice <= 0) {
-			this.livrosAlugados.add(livroAlugado);
-			indice++;
-		} else {
-			System.out.println("Não é possível locar esse livro.");
-		}
+verificadorDeLivroAlugado = false;
+		this.livrosAlugados.add(livroAlugado);
 		
 	}
 
