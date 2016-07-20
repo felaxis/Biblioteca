@@ -21,7 +21,6 @@ public class Aluno {
 			this.livrosAlugados.add(livroAlugado);
 			System.out.println("conseguiu alugar");
 			
-			setLivroJaAlugado(livroJaAlugado);
 			setLivroJaAlugado(true);
 		} else {
 			System.out.println("livro ja  alugado");
@@ -32,10 +31,6 @@ public class Aluno {
 	}
 	public int getQuantidadeDeLivrosAlugados() {
 		return livrosAlugados.size();
-	}
-
-	public boolean getLivroJaAlugado() {
-		return livroJaAlugado;
 	}
 
 	public void setLivroJaAlugado(boolean livroJaAlugado) {

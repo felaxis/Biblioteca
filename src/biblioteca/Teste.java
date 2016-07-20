@@ -19,11 +19,12 @@ public class Teste {
 		System.out.println("Aluno : " + aluno.getNomeDoAluno() + "\nLivros alugados: "
 				+ aluno.getQuantidadeDeLivrosAlugados() + "\n");
 		
-		/* outroAluno.alugarLivros(livroAlugado);
+		outroAluno.alugarLivros(livroAlugado);
+		outroAluno.alugarLivros(livroAlugado);
 		
 		System.out.println("Aluno : " + outroAluno.getNomeDoAluno() + "\nLivros alugados: "
 				+ outroAluno.getQuantidadeDeLivrosAlugados() + "\n");
-*/
+
 	}
 
 }
